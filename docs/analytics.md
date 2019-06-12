@@ -18,6 +18,6 @@ This option is designed to assess the impacts of field-level crop productivity f
 
 Date Available | Crop | Applicable Geography | Description of Model
 -------------- | -------------- | -------------- | --------------
-Jun 15 2019 (via API), Jun 30 2019 (via Operations Dashboard) | Corn/Maize (Grain) | US, Canada, France | Field-level crop yield forecast, single value per field
-Jun 15 2019 (via API), Jun 30 2019 (via Operations Dashboard) | Soybeans | US | Field-level crop yield forecast, single value per field
-Jun 15 2019 (via API), Jun 30 2019 (via Operations Dashboard) | Wheat (Winter/Spring) | US, Canada, Europe, Mexico | Field-level crop yield forecast, single value per field
+Jun 15 2019 (via API) | Corn/Maize (Grain) | US, Canada, France | Field-level crop yield forecast, single value per field
+Jun 15 2019 (via API) | Soybeans | US | Field-level crop yield forecast, single value per field
+Jun 15 2019 (via API) | Wheat (Winter/Spring) | US, Canada, Europe, Mexico | Field-level crop yield forecast, single value per field
