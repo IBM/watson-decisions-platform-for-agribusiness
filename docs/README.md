@@ -1,4 +1,4 @@
-# Watson Decision Platform for Agriculture
+# IBM Watson Decisions Platform for Agribusiness
 
 ## Analytics
 
