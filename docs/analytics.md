@@ -2,7 +2,7 @@
 
 ## Crop Yield Forecast Models
 
-The Watson Decision Platform for Agriculture offering includes options for Crop Yield Forecast analytics. The crops and geographies supported within each Option are detailed below. Information will be updated as additional models are made available.
+The IBM Watson Decisions Platform for Agribusiness offering includes options for Crop Yield Forecast analytics. The crops and geographies supported within each Option are detailed below. Information will be updated as additional models are made available.
 
 ### Yield Forecast Models - Option 1
 
