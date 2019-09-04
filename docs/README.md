@@ -3,6 +3,7 @@
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=t5Fgtby2bLQ" target="_blank"><img src="http://img.youtube.com/vi/t5Fgtby2bLQ/0.jpg" width="400" height="300" border="10" /></a>
 
 ## Overview Docs
+
 * [Landing Page](https://www.ibm.com/weather/industries/agriculture)
 * [Solution Brief](https://www.ibm.com/downloads/cas/ONVXEB2A)
 * [Global Expansion](https://newsroom.ibm.com/2019-05-22-IBM-AI-and-Cloud-Technology-Helps-Agriculture-Industry-Improve-the-Worlds-Food-and-Crop-Supply)
@@ -12,6 +13,7 @@
 * [High Level Client On-boarding Overview](./onboarding.md)
 * [Analytics Information and Availability](./analytics.md)
 * [Interacting with Watson Decision Platform: Full Technical Guidelines](./pdfs/WDP-Tech-Doc.pdf) _(pdf doc)_
+
 ## API Docs
 
 * Full API Swagger docs available here: <https://foundation.agtech.ibm.com/v2/swagger>
