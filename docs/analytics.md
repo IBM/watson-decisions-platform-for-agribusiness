@@ -18,6 +18,11 @@ This option is designed to assess the impacts of field-level crop productivity f
 
 Date Available | Crop | Applicable Geography | Description of Model
 -------------- | -------------- | -------------- | --------------
+Jul 31 2019 (via API) | Soybeans | Brazil, Canada, Mexico | Field-level crop yield forecast, spatialized to 10 meter resolution
+Jul 31 2019 (via API) | Corn/Maize (Grain) | Mexico | Field-level crop yield forecast, spatialized to 10 meter resolution
+Jun 30 2019 (via API) | Corn/Maize (Grain) | US, Canada, France | Field-level crop yield forecast, spatialized to 10 meter resolution
+Jun 30 2019 (via API) | Soybeans | US | Field-level crop yield forecast, spatialized to 10 meter resolution
 Jun 15 2019 (via API) | Corn/Maize (Grain) | US, Canada, France | Field-level crop yield forecast, single value per field
 Jun 15 2019 (via API) | Soybeans | US | Field-level crop yield forecast, single value per field
 Jun 15 2019 (via API) | Wheat (Winter/Spring) | US, Canada, Europe, Mexico | Field-level crop yield forecast, single value per field
+Jun 30 2019 (via API) | Wheat (Winter/Spring) | US, Canada, Europe, Mexico | Field-level crop yield forecast, spatialized across the field
