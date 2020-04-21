@@ -1,6 +1,6 @@
 # IBM Watson Decision Platform for Agriculture
 
-<a href="https://www.youtube.com/watch?feature=player_embedded&v=t5Fgtby2bLQ" target="_blank"><img src="https://img.youtube.com/vi/t5Fgtby2bLQ/0.jpg" width="400" height="300" border="10" /></a>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=t5Fgtby2bLQ" target="_blank"><img src="http://img.youtube.com/vi/t5Fgtby2bLQ/0.jpg" width="400" height="300" border="10" /></a>
 
 ## Overview Docs
 
@@ -35,4 +35,4 @@
 
 ## Notebooks
 
-* TBD
+* [Access Jupyter Notebooks to Interact with the Watson Decision Platform Layers](./notebooks/notebooks.md)
