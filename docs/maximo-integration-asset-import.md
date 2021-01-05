@@ -1,8 +1,8 @@
 ## IBM Weather Operations Center integration for Maximo Spatial Assets </h1> 
 
-IBM Weather Operations Center integrates with the IBM Maximo solutions suite to simplify Maximo asset sharing and monitoring. Release 1.0 empowers our customers to import Maximo Asset Locations in order to expand their exploration of weather. In order to perform the import operation, you would require URL of the Maximo instance, Maximo API credentials and Weather Operations Center user credentials issued to you at the time of provisioning. 
+IBM Weather Operations Center integrates with the IBM Maximo solutions suite to simplify GeoSpatial monitoring of client Maximo assets for additional insight. Release 1.0 empowers users to import Maximo Asset Locations in order to expand their exploration of weather and other geospatial data layers. In order to perform the import operation, you would require the URL of the Maximo instance, Maximo API credentials and Weather Operations Center user credentials issued to you at the time of provisioning. 
 
-<b>Action</b>: Ask your IBM representative to provider IBM Weather Operations Center `API_KEY` for your user. 
+<b>Action</b>: Ask your IBM representative to provide a IBM Weather Operations Center `API_KEY` for your users. 
 
 ## Generate JWT token to access IBM Weather Operations Center Service APIs
   

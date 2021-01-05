@@ -1,6 +1,6 @@
 # IBM Weather Operations Center
 
-Weather impacts every business, every day. Minimizing the disruption that it can cause requires more than just gathering weather data — you must employ advanced analytics and intelligent workflows to reimagine processes and better predict how weather will impact your assets, employees and customers. Fair or foul, when weather strikes, The IBM Weather Operations Center is a suite of applications that provides insight so you can plan for and respond to changing conditions to ensure business continuity.
+Weather and other geospatial data impacts every business, every day. Minimizing the disruption that it can cause requires more than just gathering data — you must employ advanced analytics and intelligent workflows to reimagine processes and better predict how the environment will impact your assets, employees and customers. Fair or foul, when weather strikes, The IBM Weather Operations Center is a suite of applications that provides insight so you can plan for and respond to changing conditions to ensure business continuity.
 
 This github repository contains documentation, samples and API usage examples that can be referenced when interacting with IBM Weather Operations Center. 
 
