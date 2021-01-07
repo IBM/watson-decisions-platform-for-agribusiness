@@ -5,7 +5,7 @@ In order to programatically access Weather Operations Center APIs for operations
 Shell example with curl:
 
 ```bash
-curl --request POST --url https://"token provider URL"/Auth/GetBearerForClient --header 'Content-Type: application/json' --header 'cache-control: no-cache' --data '{apiKey:"xxxxxxxxxxxxxx", clientId:"ibm-agro-api"}'
+curl --request POST --url https://"token provider URL"/Auth/GetBearerForClient --header 'Content-Type: application/json' --header 'cache-control: no-cache' --data '{"apiKey":"xxxxxxxxxxxxxx", "clientId":"ibm-agro-api"}'
 ```
 
 Example output:
