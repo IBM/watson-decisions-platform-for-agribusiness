@@ -1,4 +1,5 @@
 # Geospatial Analytics API
+
 ## Authentication
 
 ### Overview
@@ -22,7 +23,7 @@ To make Geospatial Analytics API requests an API key is provided to obtain an ac
 which is then used in API requests to confirm authentication and to execute further authorization controls.
 
 Geospatial Analytics API requests are secured by access token validation. The following diagram illustrates the API key usage flow
-for just one of the Geospatial Analytics APIs: `/v2/query`. The section [Obtaining an Access Token](#Obtaining-an-Access-Token) further
+for just one of the Geospatial Analytics APIs: `/v2/query`. The section [Obtaining an Access Token](#obtaining-an-access-token) further
 below provides details.
 
 ![Geospatial-API-Authentication-Overview](resources/Geospatial-API-Authentication-Overview.png)
