@@ -19,11 +19,11 @@ An OpenId Connect discovery document for the authorization server is located at 
 - https://auth-b2b-twc.ibm.com/.well-known/openid-configuration
 
 To make Geospatial Analytics API requests an API key is provided to obtain an access token
-which is use to confirm requests are authenticated and to execute further authorization controls.
+which is then used in API requests to confirm authentication and to execute further authorization controls.
 
-The following diagram illustrates the API key usage flow for just one of the Geospatial Analytics APIs
-that are secured by access tokens. The section [Obtaining an Access Token](#Obtaining-an-Access-Token) below
-provides further details.
+Geospatial Analytics API requests are secured by access token validation. The following diagram illustrates the API key usage flow
+for just one of the Geospatial Analytics APIs: `/v2/query`. The section [Obtaining an Access Token](#Obtaining-an-Access-Token) further
+below provides details.
 
 ![Geospatial-API-Authentication-Overview](resources/Geospatial-API-Authentication-Overview.png)
 
@@ -32,9 +32,9 @@ provides further details.
 2.1. The JSON property `refresh_token` value is kept for later use in `#5` below.
 3. Requests to the Geospatial Analytics API shall be submitted to the applicable API endpoint with "`Authorization: Bearer xxxxxxxx`"
 4. Geospatial Analytics API response payload
-5. The access token obtained in `#2` has expired, a request for a refreshed token is made using `refresh_token`
+5. The access token obtained in `#2` has expired, a request for a new token is made using the `refresh_token` value
 6. The JSON response contains properties `access_token` and `refresh_token` as in `#2` above
-7. The new access token ins used for Geospatial Analytics API requests
+7. The new access token is used for Geospatial Analytics API requests
 8. Geospatial Analytics API response payload; and the process to make API requests and refresh access token continues
 
 ### Obtaining an Access Token
@@ -65,11 +65,11 @@ The result of **POST** `/auth/GetBearerForClient` will produce:
 }
 ```
 
-Where the response payload property value for `access_token` is used in the example below
+Where; the response payload value for property `access_token` is used in the example below
 which submits a Geospatial Analytics API query request.
 
-In this example, the value of the `access_token` property in the response above is used as the `Authorization` header
-Bearer realm value in a request to the Geospatial Analytics API `/v2/query` endpoint.
+In this example, the value of the `access_token` property in the response above is used as the value for
+the`Authorization` header Bearer realm in a request to the Geospatial Analytics API `/v2/query` endpoint.
 
 ``` shell
 curl --request POST \
@@ -81,15 +81,14 @@ curl --request POST \
 
 ### Refreshing an Access Token
 
-For scenarios where an access token is longer than the default token expiry of 1 hour, Geospatial Analytics API requests
-will respond with a `403` Forbidden code and an error data payload:
+For scenarios where usage of an access token is longer than the default token expiry of 1 hour,
+Geospatial Analytics API requests will respond with a *`403` Forbidden* code and an error data payload:
 
 `{"error":"jwt signature verification failed: 'exp' claim expired at Mon, 4 Jan 2021 10:27:37 GMT"}`
 
-
-When an access token expires, a `/auth/GetBearerForClient` and `/connect/token` JSON response
-property `refresh_token` can be used to request a new access_token without re-authenticating
-with your API as follows:
+When an access token expires, the `refresh_token` property value of `/auth/GetBearerForClient` and
+`/connect/token` JSON responses can be used to request a new `access_token` without re-authenticating
+with your API key as follows:
 
 ``` shell
 curl --request POST \
@@ -100,5 +99,6 @@ curl --request POST \
      --data-urlencode "refresh_token=xxxxxxxx"
 ```
 
-The result of **POST** `/connect/token` will produce a JSON response payload with an `access_token` and
-a new `refresh_token` to use in subsequent requests to refresh your access token.
+The result of **POST** `/connect/token` will produce a JSON response payload with a new `access_token` and
+`refresh_token` to use in subsequent Geospatial Analytics API and authorization server requests
+where applicable..
