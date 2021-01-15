@@ -24,7 +24,7 @@ This github repository contains documentation and API usage examples that can be
 
 #### API Authentication
 
-* [How to generate and use access tokens](./geospatial-api.md#Authentication)
+* [How to generate and use access tokens](./geospatial-api.md#authentication)
 
 #### Custom Geospatial Queries
 
