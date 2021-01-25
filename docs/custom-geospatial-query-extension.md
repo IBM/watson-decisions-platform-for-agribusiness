@@ -70,48 +70,47 @@ curl -X POST "https://foundation.agtech.ibm.com/v2/layer/analytics/metadata" \
  Everything else can be kept as is for an initial simplified scenario. Contact your IBM representative to discuss advanced geospatial analytics use-cases.
 
 
-```
+``` json
 curl --location --request PUT 'https://api.wsitrader.com/api/v1/IMAP/put-layer-config-block' \
 --header 'Authorization: Bearer <ACCESS_JWT>' \
 --header 'Content-Type: application/json' \
---data-raw '{VIEWERSHIP_ROLE : 'ALL', CONFIG_BLOCK: {
-    id: 'customQuery-staging-test01',
-    modelRegistryId: null,
-    displayName: 'Staging Test - Custom Query 01',
-    provider: null,
-    layerType: 'grid',
-    isSelected: false,
-    isActive: false,
-    enableValidity: false,
-    lastUpdatedUtc: null,
-    coverageArea: 'Custom',
-    dataAttributes: {
-      url: 'https://foundation.agtech.ibm.com/v2',
-      uuid: '1f2d5a9e-39c5-4ca4-bebc-14ac43646960'
+--data-raw '{"VIEWERSHIP_ROLE" : "ALL", "CONFIG_BLOCK": {
+    "id": "customQuery-staging-test01",
+    "modelRegistryId": null,
+    "displayName": "Staging Test - Custom Query 01",
+    "provider": null,
+    "layerType": "grid",
+    "isSelected": false,
+    "isActive": false,
+    "enableValidity": false,
+    "lastUpdatedUtc": null,
+    "coverageArea": "Custom",
+    "dataAttributes": {
+      "url": "https://foundation.agtech.ibm.com/v2",
+      "uuid": "1f2d5a9e-39c5-4ca4-bebc-14ac43646960"
     },
-    menuIconUrl: null,
-    legendUrl: '',
-    styleProperties: {
-      palette: {
-        COLOR_STEPS: [
-          { step: -1, rgba: [ 0, 0, 8, 255 ] },
-          { step: 0, rgba: [ 11, 0, 251, 255 ] },
-          { step: .2, rgba: [ 236, 0, 34, 255 ] },
-          { step: .4, rgba: [ 250, 93, 7, 255 ] },
-          { step: .6, rgba: [ 250, 249, 0, 255 ] },
-          { step: .8, rgba: [ 0, 239, 0, 255 ] },
-          { step: 1, rgba: [ 1, 49, 1, 255 ] }
+    "menuIconUrl": null,
+    "legendUrl": "",
+    "styleProperties": {
+      "palette": {
+        "COLOR_STEPS": [
+          { "step": -1, "rgba": [ 0, 0, 8, 255 ] },
+          { "step": 0, "rgba": [ 11, 0, 251, 255 ] },
+          { "step": .2, "rgba": [ 236, 0, 34, 255 ] },
+          { "step": .4, "rgba": [ 250, 93, 7, 255 ] },
+          { "step": .6, "rgba": [ 250, 249, 0, 255 ] },
+          { "step": .8, "rgba": [ 0, 239, 0, 255 ] },
+          { "step": 1, "rgba": [ 1, 49, 1, 255 ] }
         ]
       },
-      unit: 'C',
-      isInterpolated: true,
-      extendMinimumColor: false,
-      extendMaximumColor: true,
-      invalidDataValue: -9999
+      "unit": "C",
+      "isInterpolated": true,
+      "extendMinimumColor": false,
+      "extendMaximumColor": true,
+      "invalidDataValue": -9999
     }
   }}'
 ```
-
 
 <b>Example response</b>:
 
