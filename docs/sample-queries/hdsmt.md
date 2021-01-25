@@ -1,10 +1,10 @@
 # HDSM/T Data Query Samples
 
-1. Get a valid auth token: [how to create tokens](../api-tokens.md)
+1. Get a valid auth token: [Generate an API Authorization JWT](./api-tokens.md)
 2. Get a list of fields: `curl -X GET "https://foundation.agtech.ibm.com/v2/field" -H "accept: application/json; charset=UTF-8" -H  "Authorization: Bearer ey .. Q2"`
 </br> Sample response: `{"properties":{"name":"SampleFieldName1","deleted":false,"creationTime":"2018-09-01T15:06:04Z"},"uuid":"1110b2c9-b727-47ee-97c7-2a0b6497ba6a","type":"Feature"}`
 </br> Just get the uuid for the next query: `1110b2c9-b727-47ee-97c7-2a0b6497ba6a`
-3. For each field uuid, then get the list of subfields, eg: `curl -X GET "https://foundation.agtech.ibm.com/v2/field/1110b2c9-b727-47ee-97c7-2a0b6497ba6a?projection=4326" -H  "accept: application/json; charset=UTF-8" -H  "Authorization: Bearer ey .. Q2"` 
+3. For each field uuid, then get the list of subfields, eg: `curl -X GET "https://foundation.agtech.ibm.com/v2/field/1110b2c9-b727-47ee-97c7-2a0b6497ba6a?projection=4326" -H  "accept: application/json; charset=UTF-8" -H  "Authorization: Bearer ey .. Q2"`
 </br> Sample response:
 `{"properties":{"name":"SampleFieldName1","deleted":false,"creationTime":"2018-09-01T15:06:04Z"},"uuid":"1110b2c9-b727-47ee-97c7-2a0b6497ba6a","type":"Feature","subFields":{"features":[{"properties":{"name":"SampleSubFieldName1","area":36225.29372889644,"box":{"north":40.8,"south":...},"centroid":{"latitude":40...,"longitude":-8...},"ianaTimeZone":"America/...","deleted":false},"id":25,"uuid":"f811bed8-306f-4d1e-9059-87680924acca","type":"Feature","geometry":{"type":"Polygon","coordinates":[...},"fieldUuid":"1110b2c9-b727-47ee-97c7-2a0b6497ba6a"}],"type":"FeatureCollection"}}`
 4. In the above 1110b2c9-b727-47ee-97c7-2a0b6497ba6a is the field uuid and f811bed8-306f-4d1e-9059-87680924acca is the subfield uuid, so to access the info on data availability of that subfield: `curl -X GET "https://foundation.agtech.ibm.com/v2/field/1110b2c9-b727-47ee-97c7-2a0b6497ba6a/subfield/f811bed8-306f-4d1e-9059-87680924acca/layer/HDSM/info" -H  "accept: application/json; charset=UTF-8" -H  "Authorization: Bearer ey .. Q2"`
@@ -13,4 +13,4 @@
 6. Get also the temperature data: `curl -X GET "https://foundation.agtech.ibm.com/v2/field/1110b2c9-b727-47ee-97c7-2a0b6497ba6a/subfield/f811bed8-306f-4d1e-9059-87680924acca/layer/HDSM/data?format=GRID&temperature=true&date=2018-09-04" -H "Authorization: Bearer ey .. Q2" > subfield-f811bed8-306f-4d1e-9059-87680924acca-soil-temperature-2018-09-04.tiff`
 7. So the HDSM and HDST data now is in the 2 files:</br>
 `subfield-f811bed8-306f-4d1e-9059-87680924acca-soil-moisture-2018-09-04.tiff` and `subfield-f811bed8-306f-4d1e-9059-87680924acca-soil-temperature-2018-09-04.tiff`
-8. The downloaded files are geotiff rasters which can be opened with eg QGIS app or any other software library that can handle geo raster data. 
+8. The downloaded files are geotiff rasters which can be opened with eg QGIS app or any other software library that can handle geo raster data.

@@ -43,7 +43,7 @@ below provides details.
 An API endpoint is provided that accepts a JSON object and will return a JSON response containing an access token:
 - **POST** https://auth-b2b-twc.ibm.com/auth/GetBearerForClient
 - **Content-Type:** `application/json`
-- **Expected Data:** `{"clientId":"ibm-pairs", "apiKey":"xxxxxxxx"}`
+- **Expected Data:** `{"apiKey":"xxxxxxxx", "clientId":"ibm-pairs"}`
 
 For example:
 
@@ -58,15 +58,15 @@ The result of **POST** `/auth/GetBearerForClient` will produce:
 
 ``` json
 {
- "access_token":"xxxxxxxx",
+ "access_token":"<ACCESS_JWT>",
  "expires_in":3600,
  "token_type":"Bearer",
- "refresh_token":"xxxxxxxx",
+ "refresh_token":"<REFERSH TOKEN>",
  "scope":"custom.profile email ibm-pairs-api offline_access openid phoenix-api profile"
 }
 ```
 
-Where; the response payload value for property `access_token` is used in the example below
+Where; the response payload value for property `access_token`, i.e. `<ACCESS_JWT>`, is used in the example below
 which submits a Geospatial Analytics API query request.
 
 In this example, the value of the `access_token` property in the response above is used as the value for
@@ -76,7 +76,7 @@ the`Authorization` header Bearer realm in a request to the Geospatial Analytics 
 curl --request POST \
      --url https://pairs.res.ibm.com/v2/query \
      --header 'Content-Type: application/json' \
-     --header 'Authorization: Bearer xxxxxxxx' \
+     --header 'Authorization: Bearer <ACCESS_JWT>' \
      --data '{...omitted for brevity...}'
 ```
 
@@ -97,7 +97,7 @@ curl --request POST \
      --header 'Content-Type: application/x-www-form-urlencoded' \
      --data-urlencode "grant_type=refresh_token" \
      --data-urlencode "client_id=ibm-pairs" \
-     --data-urlencode "refresh_token=xxxxxxxx"
+     --data-urlencode "refresh_token=<REFRESH TOKEN>"
 ```
 
 The result of **POST** `/connect/token` will produce a JSON response payload with a new `access_token` and

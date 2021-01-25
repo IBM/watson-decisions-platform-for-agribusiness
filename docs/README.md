@@ -20,18 +20,11 @@ This github repository contains documentation and API usage examples that can be
 
 * [Importing Maximo Locations into Weather Operations Center](./maximo-integration-asset-import.md)
 
-### Geospatial Analytics
-
-#### API Authentication
-
-* [How to generate and use access tokens](./geospatial-api.md#authentication)
-
-#### Custom Geospatial Queries
+### Custom Geospatial Queries
 
 * [Performing Custom Geospatial Queries, Registration and Visualization](./custom-geospatial-query-extension.md)
 
 ### Agriculture Add-on Specific Examples and Samples
-* [How to generate auth tokens](./api-tokens.md)
 * [How admin users can create fields on behalf of regular users](./admin-creating-fields.md)
 * [How admin users can upload customer field data to IBM Cloud Object Storage](./admin-upload-files-to-cos.md)
 * [Sample Data Query for HDSM/T layer](./sample-queries/hdsmt.md)

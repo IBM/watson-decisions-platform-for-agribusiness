@@ -2,7 +2,8 @@
 
 The following assumes subfield geometries (eg as kml files) have been already uploaded to an IBM COS bucket called eg agrotech-prod-agrocustomername-onboarding.
 
-1. Create a JSON payload similar to this in a file called eg field.json:
+1. Get a valid auth token: [Generate an API Authorization JWT](./api-tokens.md)
+2. Create a JSON payload similar to this in a file called eg field.json:
 
 ```json
 {
@@ -18,8 +19,7 @@ The following assumes subfield geometries (eg as kml files) have been already up
     ]
  }
  ```
+3. Run the following field API:
 
-2. Run the following field API:
-
-* `curl -X POST -H 'Accept: application/json' -H 'Content-Type: application/json' -H  "X-Profile-Id: <PROFILE-ID>" -H 'Authorization: Bearer <ADMIN JWT TOKEN>' -d @field.json -i 'https://foundation.agtech.ibm.com/v2/field'`
+* `curl -X POST -H 'Accept: application/json' -H 'Content-Type: application/json' -H  "X-Profile-Id: <PROFILE-ID>" -H 'Authorization: Bearer <ADMIN JWT>' -d @field.json -i 'https://foundation.agtech.ibm.com/v2/field'`
 * This assumes that you have been provided with an admin API key to be able generate an admin token and also with the PROFILE-ID that correspondes to the customer userid.
