@@ -39,6 +39,10 @@ below provides details.
 8. Geospatial Analytics API response payload; and the process to make API requests and refresh access token continues
 
 ### Obtaining an Access Token
+* **Tutorial usages**
+    * <a href="./custom-geospatial-query-extension.md#access-jwt-ex1">`<ACCESS_JWT>` - Registration Part # 1 - Platform metadata</a>
+    * <a href="./custom-geospatial-query-extension.md#access-jwt-ex2">`<ACCESS_JWT>` - Registration Part # 2 - Visualization metadata</a>
+    * <a href="./custom-geospatial-query-extension.md#access-jwt-ex3">`<ACCESS_JWT>` - Merge the new job with original baseComputationId</a>
 
 An API endpoint is provided that accepts a JSON object and will return a JSON response containing an access token:
 - **POST** https://auth-b2b-twc.ibm.com/auth/GetBearerForClient

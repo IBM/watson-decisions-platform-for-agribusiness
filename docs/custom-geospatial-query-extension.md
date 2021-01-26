@@ -40,7 +40,7 @@ Get an access token:
 
 ### Registration Part # 1 - Platform metadata
 
-<b>Substitute `ACCESS_JWT`, your `QUERY_PAYLOAD` and `ANALYTICS_NAME` below - and make the curl request in a command-line window (PC) or a terminal (MAC) </b>:
+<a id="user-content-access-jwt-ex1" href="#access-jwt-ex1"></a><b>Substitute `ACCESS_JWT`, your `QUERY_PAYLOAD` and `ANALYTICS_NAME` below - and make the curl request in a command-line window (PC) or a terminal (MAC) </b>:
 
 ``` shell
 curl -X POST "https://foundation.agtech.ibm.com/v2/layer/analytics/metadata" \
@@ -65,7 +65,7 @@ curl -X POST "https://foundation.agtech.ibm.com/v2/layer/analytics/metadata" \
 ### Registration Part # 2 - Visualization metadata
 
 
- Before making the sample request below, modify the <b>`id`</b> to be something unique, set the desired <b>`displayName`</b> and substitute the correct <b>`data Attribute uuid`</b> using the `analyticsUuid` value from the response above. Also, substitute ACCESS_JWT
+ Before making the sample request below, modify the <b>`id`</b> to be something unique, set the desired <b>`displayName`</b> and substitute the correct <b>`data Attribute uuid`</b> using the `analyticsUuid` value from the response above. <a id="user-content-access-jwt-ex2" href="#access-jwt-ex2"></a>Also, substitute ACCESS_JWT
 
  Everything else can be kept as is for an initial simplified scenario. Contact your IBM representative to discuss advanced geospatial analytics use-cases.
 
@@ -191,7 +191,7 @@ curl --location --request POST 'https://pairs.res.ibm.com/v2/query' \
 
 ### Merge the new job with original baseComputationId from Day 0 - Registration Part # 1 above
 
-<b>Merge Jobs</b>:
+<a id="user-content-access-jwt-ex3" href="#access-jwt-ex3"><b>Merge Jobs</b>:
 
 ``` shell
 curl --location --request PUT 'https://pairs.res.ibm.com/v2/queryjobs/1607533200_04490762/merge/1607533200_04577287' \
