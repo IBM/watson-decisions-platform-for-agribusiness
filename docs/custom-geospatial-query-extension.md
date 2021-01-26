@@ -26,8 +26,8 @@ Proceed to Day 0 below once your geospatial query is finalized and you would lik
 
 <b>Example geospatial query that is ready to be operationalized </b>:
 
-``` json
-{"spatial":{"type":"square","aoi":null,"coordinates":[38,-122,39,-121]},"temporal":{"intervals":[{"start":"2020-08-01","end":"2020-08-31"}]},"layers":[{"id":"51","type":"raster"}]}
+```
+{\"spatial\":{\"type\":\"square\",\"aoi\":null,\"coordinates\":[38,-122,39,-121]},\"temporal\":{\"intervals\":[{\"start\":\"2020-08-01\",\"end\":\"2020-08-31\"}]},\"layers\":[{\"id\":\"51\",\"type\":\"raster\"}]}
 ```
 
 ## Day 0: Register Analytics for visualization in Weather Operations Center - Dashboard Visualization Component
@@ -35,7 +35,7 @@ Proceed to Day 0 below once your geospatial query is finalized and you would lik
 ### Generate JWT token
 
 Get an access token:
-1. Follow the steps in [Geospatial Analytics API - Obtaining an Access Token](./geospatial-api.md) to obtain the token indicated by `<ACCESS_JWT>`
+1. Follow the steps in [Geospatial Analytics API - Obtaining an Access Token](./geospatial-api.md#obtaining-an-access-token) to obtain the token indicated by `<ACCESS_JWT>`
 2. Copy the value corresponding to `<ACCESS_JWT>` from the step above to use in the Import API call below.
 
 ### Registration Part # 1 - Platform metadata
@@ -47,7 +47,7 @@ curl -X POST "https://foundation.agtech.ibm.com/v2/layer/analytics/metadata" \
   -H "accept: application/json" \
   -H "Authorization: Bearer <ACCESS_JWT>" \
   -H "Content-Type: application/json; charset=UTF-8" \
-  -d "{\"pairsPayload\":\"<QUERY_PAYLOAD>\",\"analyticsName\":\"<ANALYTICS_NAME\"}"
+  -d "{\"pairsPayload\":\"<QUERY_PAYLOAD>\",\"analyticsName\":\"<ANALYTICS_NAME>\"}"
 ```
 
 <b>Example Response</b>:
@@ -70,11 +70,11 @@ curl -X POST "https://foundation.agtech.ibm.com/v2/layer/analytics/metadata" \
  Everything else can be kept as is for an initial simplified scenario. Contact your IBM representative to discuss advanced geospatial analytics use-cases.
 
 
-``` json
+``` shell
 curl --location --request PUT 'https://api.wsitrader.com/api/v1/IMAP/put-layer-config-block' \
 --header 'Authorization: Bearer <ACCESS_JWT>' \
 --header 'Content-Type: application/json' \
---data-raw '{"VIEWERSHIP_ROLE" : "ALL", "CONFIG_BLOCK": {
+--data '{"VIEWERSHIP_ROLE" : "ALL", "CONFIG_BLOCK": {
     "id": "customQuery-staging-test01",
     "modelRegistryId": null,
     "displayName": "Staging Test - Custom Query 01",
@@ -155,8 +155,8 @@ Block Added.`
 ``` shell
 curl --location --request POST 'https://pairs.res.ibm.com/v2/query' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Basic KEY' \
---data-raw '{
+--header 'Authorization: Bearer <ACCESS_JWT>' \
+--data '{
     "spatial": {
         "type": "square",
         "coordinates": [
@@ -191,7 +191,7 @@ curl --location --request POST 'https://pairs.res.ibm.com/v2/query' \
 
 ### Merge the new job with original baseComputationId from Day 0 - Registration Part # 1 above
 
-<a id="user-content-access-jwt-ex3" href="#access-jwt-ex3"><b>Merge Jobs</b>:
+<a id="user-content-access-jwt-ex3" href="#access-jwt-ex3"></a><b>Merge Jobs</b>:
 
 ``` shell
 curl --location --request PUT 'https://pairs.res.ibm.com/v2/queryjobs/1607533200_04490762/merge/1607533200_04577287' \
