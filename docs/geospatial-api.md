@@ -13,7 +13,7 @@ HTTP Authorization header Bearer realm. For example:
 ``` text
 Authorization: Bearer <JSON Web Token>
 ```
-* *See* [Obtaining an access token](#obtaining-an-access-token)<sup>1</sup>
+* *See* [Obtaining an access token](#obtaining-an-access-token1)<sup>1</sup>
 
 Geospatial Analytics uses the IBM Environmental Intelligence Suite authorization server to provide API access.
 The Environmental Intelligence Suite authorization server implements standard OAuth 2.0 and OpenId Connect 1.0 protocols.
@@ -28,7 +28,7 @@ To make Geospatial Analytics API requests an API key is provided to obtain an ac
 which is then used in API requests to confirm authentication and to execute further authorization controls.
 
 Geospatial Analytics API requests are secured by access token validation. The following diagram illustrates the API key usage flow
-for just one of the Geospatial Analytics APIs: `/v2/query`. The section [Obtaining an Access Token](#obtaining-an-access-token) further
+for just one of the Geospatial Analytics APIs: `/v2/query`. The section [Obtaining an Access Token](#obtaining-an-access-token1)<sup>1</sup> further
 below provides details.
 
 ![Geospatial-API-Authentication-Overview](resources/Geospatial-API-Authentication-Overview.png)
@@ -46,9 +46,9 @@ below provides details.
 ### Obtaining an Access Token<sup>1</sup>
 * **Tutorial examples where an access token is used**
     * See *`<ACCESS_JWT>`* in:
-        * [Registration Part # 1 - Platform metadata](./custom-geospatial-query-extension#access-jwt-ex1)
-        * [Registration Part # 2 - Visualization metadata](./custom-geospatial-query-extension#access-jwt-ex2)
-        * [Merge the new job with original `baseComputationId`](./custom-geospatial-query-extension#access-jwt-ex3)
+        * [Registration Part # 1 - Platform metadata](./custom-geospatial-query-extension.md#access-jwt-ex1)
+        * [Registration Part # 2 - Visualization metadata](./custom-geospatial-query-extension.md#access-jwt-ex2)
+        * [Merge the new job with original `baseComputationId`](./custom-geospatial-query-extension.md#access-jwt-ex3)
 
 **Linux, macOS**
 
