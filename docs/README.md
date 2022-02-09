@@ -25,6 +25,7 @@ This github repository contains documentation and API usage examples that can be
 ### Vegetation Management Add-on
 
 * [Product Page](https://www.ibm.com/products/vegetation-management)
+* [Jupyter Notebooks to Interact with Vegetation Management Data](./notebooks/vegm/notebooks.md)
 
 ### Agriculture Add-on
 * [Product Page](https://www.ibm.com/products/agriculture)
