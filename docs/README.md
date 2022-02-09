@@ -1,6 +1,8 @@
 # IBM Environmental Intelligence Suite
 
-<https://github.com/IBM/Environmental-Intelligence-Suite>
+Source code: <https://github.com/IBM/Environmental-Intelligence-Suite>
+
+Published as github pages at <https://ibm.github.io/Environmental-Intelligence-Suite/>
 
 Weather and other geospatial data impacts every business, every day. Minimizing the disruption that it can cause requires more than just gathering data — you must employ advanced analytics and intelligent workflows to reimagine processes and better predict how the environment will impact your assets, employees and customers. Fair or foul, when weather strikes, The IBM Environmental Intelligence Suite is a suite of applications that provides insight so you can plan for and respond to changing conditions to ensure business continuity.
 
